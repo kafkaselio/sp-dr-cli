@@ -1,0 +1,59 @@
+{
+  "name": "mechbuild",
+  "version": "1.0.0",
+  "description": "Futuristic mech-assembly themed project scaffolding CLI",
+  "type": "module",
+  "bin": {
+    "mechbuild": "./bin/mechbuild.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node bin/mechbuild.js",
+    "clean": "rimraf dist",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "ejs": "^3.1.9",
+    "execa": "^8.0.1",
+    "fs-extra": "^11.2.0",
+    "gradient-string": "^2.0.2",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.0",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "cli",
+    "scaffold",
+    "boilerplate",
+    "generator",
+    "mech",
+    "cyberpunk",
+    "project-starter"
+  ],
+  "author": "mechbuild contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/mechbuild-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/mechbuild-cli/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/mechbuild-cli#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
